@@ -30,8 +30,8 @@ public class PollutionCollectorService extends
     @RestClient
     StationServiceClient stationServiceClient;
 
-    @Incoming("gas-external")
-    @Outgoing("gas-internal")
+    @Incoming("pollution-external")
+    @Outgoing("pollution-internal")
     public String collect(byte[] json) throws TelemetryDataValidationException,
             TelemetryTransformationException {
         return super.collect(json);
