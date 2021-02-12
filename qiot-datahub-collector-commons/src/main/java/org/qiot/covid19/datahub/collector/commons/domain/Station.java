@@ -1,9 +1,8 @@
 package org.qiot.covid19.datahub.collector.commons.domain;
 
 import java.time.Instant;
-import java.util.Objects;
 
-import javax.json.bind.annotation.JsonbProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
@@ -16,9 +15,9 @@ public class Station {
     public double latitude;
     public String city;
     public String country;
-    @JsonbProperty(value = "ccode")
+    @JsonProperty(value = "ccode")
     public String countryCode;
-    @JsonbProperty(value = "registered_on")
+    @JsonProperty(value = "registered_on")
     public Instant registeredOn;
     
     

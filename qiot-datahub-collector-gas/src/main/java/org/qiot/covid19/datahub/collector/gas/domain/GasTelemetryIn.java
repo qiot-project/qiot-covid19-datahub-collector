@@ -1,24 +1,21 @@
 package org.qiot.covid19.datahub.collector.gas.domain;
 
-import javax.validation.constraints.NotNull;
-
 import org.qiot.covid19.datahub.collector.commons.domain.AbstractTelemetryIn;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
 @RegisterForReflection
 public class GasTelemetryIn extends AbstractTelemetryIn {
 
+    @JsonProperty(value = "adc")
     public Double adc;
-
-    @NotNull
+    @JsonProperty(value = "nh3")
     public double nh3;
-
-    @NotNull
+    @JsonProperty(value = "oxidising")
     public double oxidising;
-
-    @NotNull
+    @JsonProperty(value = "reducing")
     public double reducing;
-
 
 }

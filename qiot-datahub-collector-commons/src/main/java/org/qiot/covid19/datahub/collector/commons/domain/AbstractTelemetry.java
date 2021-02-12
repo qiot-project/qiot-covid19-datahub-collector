@@ -5,16 +5,20 @@ package org.qiot.covid19.datahub.collector.commons.domain;
 
 import java.time.Instant;
 
-import javax.json.bind.annotation.JsonbProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
 /**
  * @author abattagl
  *
  */
+@RegisterForReflection
 public abstract class AbstractTelemetry {
-    @JsonbProperty(value = "station_id")
+    @JsonProperty(value = "stationId")
     public String stationId;
 
+    @JsonProperty(value = "instant")
     public Instant time;
 
     @Override

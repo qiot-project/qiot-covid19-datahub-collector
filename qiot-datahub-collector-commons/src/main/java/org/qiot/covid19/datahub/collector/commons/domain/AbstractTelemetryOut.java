@@ -3,7 +3,7 @@
  */
 package org.qiot.covid19.datahub.collector.commons.domain;
 
-import javax.json.bind.annotation.JsonbProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author abattagl
@@ -16,6 +16,6 @@ public abstract class AbstractTelemetryOut extends AbstractTelemetry {
     public double latitude;
     public String city;
     public String country;
-    @JsonbProperty(value = "ccode")
+    @JsonProperty(value = "ccode")
     public String countryCode;
 }
