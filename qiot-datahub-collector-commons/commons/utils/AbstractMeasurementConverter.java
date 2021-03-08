@@ -13,7 +13,7 @@ import javax.json.JsonReader;
 import org.qiot.covid19.datahub.storer.commons.domain.AbstractMeasurement;
 
 /**
- * @author abattagl
+ * @author andreabattaglia
  *
  */
 public abstract class AbstractMeasurementConverter<M extends AbstractMeasurement> {

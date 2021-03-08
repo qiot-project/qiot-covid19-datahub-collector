@@ -16,7 +16,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import io.qiot.covid19.datahub.collector.commons.domain.Station;
 
 /**
- * @author abattagl
+ * @author andreabattaglia
  *
  */
 @Path("/v1/station")

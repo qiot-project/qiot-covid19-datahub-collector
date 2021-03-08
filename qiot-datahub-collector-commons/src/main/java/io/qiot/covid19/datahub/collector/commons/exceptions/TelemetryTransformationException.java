@@ -4,7 +4,7 @@
 package io.qiot.covid19.datahub.collector.commons.exceptions;
 
 /**
- * @author abattagl
+ * @author andreabattaglia
  *
  */
 public class TelemetryTransformationException extends Exception {

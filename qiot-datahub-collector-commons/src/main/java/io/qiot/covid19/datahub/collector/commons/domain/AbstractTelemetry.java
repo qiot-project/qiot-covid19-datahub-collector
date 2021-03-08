@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
 /**
- * @author abattagl
+ * @author andreabattaglia
  *
  */
 @RegisterForReflection
