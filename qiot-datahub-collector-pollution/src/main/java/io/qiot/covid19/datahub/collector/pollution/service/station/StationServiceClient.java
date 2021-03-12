@@ -4,9 +4,11 @@
 
 package io.qiot.covid19.datahub.collector.pollution.service.station;
 
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -22,10 +24,11 @@ import io.qiot.covid19.datahub.collector.commons.domain.Station;
 @Path("/v1/station")
 @RegisterRestClient(configKey = "station-api")
 public interface StationServiceClient {
-    
+
     @GET
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)
-    public Station getById(@QueryParam("id") String id);
+    @Path("/id/{id}")
+    public Station getById(@PathParam("id") @NotNull String id);
 
 }
